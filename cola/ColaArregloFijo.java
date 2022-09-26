@@ -63,7 +63,7 @@ public class ColaArregloFijo<T> implements Cola<T> {
 			return 0;
 		}else {
 			int acum = 0;
-			for (int i = 0; i < arreglo.length; i++ ) {
+			for (int i = 0; i < elementos; i++ ) {
 					acum ++;
 			}
 			return acum;
@@ -88,15 +88,12 @@ public class ColaArregloFijo<T> implements Cola<T> {
 			
 			T valorSuprimido =  (T) arreglo [0]; // casteo el arreglo de Object a un tipo polimorfico T
 			
-			for (int j = 0; j < elementos () ; j++) {
+			for (int j = 0; j < elementos () - 1; j++) {
 				
 				arreglo [j] = arreglo [j + 1];
 			}
 			
-			int elem = elementos ();
-			elem --;
-			arreglo = new Object [elem]; // logro decrementar el tamaño del arreglo
-			
+			elementos --;
 			return (valorSuprimido); // retorno el valor desencolado
 		}
 	}
@@ -120,7 +117,7 @@ public class ColaArregloFijo<T> implements Cola<T> {
 		if ( esVacia()) {
 			throw new IllegalStateException ("Vaciar sobre arreglo vacio.");
 		}else {
-			arreglo = new Object [0]; // longitud del arreglo en 0
+			elementos = 0; // se vacia el arreglo
 			System.out.println("El arreglo se vacio correctamente.");
 		}
 	}
@@ -138,7 +135,7 @@ public class ColaArregloFijo<T> implements Cola<T> {
 			int i = 0;
 			String result = "";
 			while (i < elementos ()) {
-				result = result + String.valueOf(arreglo[i]) + "  ";
+				result = result + String.valueOf(arreglo[i]) + "   ";
 				i++;
 			}
 			return result;

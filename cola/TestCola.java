@@ -16,29 +16,29 @@ public class TestCola {
 			
 				int numero = Integer.parseInt(entrada.nextLine());
 				switch (numero) {
-						case 1: // encolar todo ok
+						case 1: 
 								System.out.println("Digite el numero a encolar: ");
 								int num = Integer.parseInt(entrada.nextLine());
 								System.out.println (array.encolar(num));
 								break;
 						
-						case 2: // ver
+						case 2: 
 								System.out.println ("Elemento desencolado: " + array.desencolar() );
 								break;
 						
-						case 3:	// todo ok
+						case 3:	
 								System.out.println("Longitud del arreglo: " + array.elementos());
 								break;
 								
-						case 4: // todo ok
+						case 4: 
 								System.out.println("Primer elemento: " + array.primero());
 								break;
 			
-						case 5: // ver
+						case 5: 
 								array.vaciar();
 								break;
 						
-						case 6:	// todo ok
+						case 6:	
 								System.out.println (array.toString());
 								break;
 			
@@ -49,5 +49,4 @@ public class TestCola {
 		}
 		
 	}
-
 }
